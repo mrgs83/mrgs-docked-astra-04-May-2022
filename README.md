@@ -9,11 +9,20 @@ Before deploying Astra, ensure you have the necessary license and configuration 
   ```
   /mnt/user/appdata/astra/license.txt
   ```
-- **Configuration File:** Name your configuration file uniquely if you intend to run multiple Astra containers. Place the configuration file(s) at the following path on your Unraid server:
+- **Configuration File:** To ensure smooth operation when running multiple Astra containers, each container should have its own unique configuration folder. Place the `astra.conf` file in a unique folder for each container at the following path on your Unraid server:
   ```
-  /mnt/user/appdata/astra/astra-[your-unique-name].conf
+  /mnt/user/appdata/astra/[your-unique-name]/astra.conf
   ```
-  Replace `[your-unique-name]` with a descriptor or name that is relevant to your setup (e.g., `astra-DVB-T.conf`, `astra-DVB-S.conf`, etc.)
+  Replace `[your-unique-name]` with a descriptor or name that is relevant to your setup. For example:
+  - For a DVB-T setup, use `astra-DVB-T`, resulting in the path:
+    ```
+    /mnt/user/appdata/astra/astra-DVB-T/astra.conf
+    ```
+  - For a DVB-S setup, use `astra-DVB-S`, leading to the path:
+    ```
+    /mnt/user/appdata/astra/astra-DVB-S/astra.conf
+    ```
+
 
 ### Step 1: Open Unraid Terminal
 Navigate to your Unraid web interface, typically located at `http://[YourUnraidIP]`. On the bottom right of the dashboard, you should find a "Terminal" button. Click on it to open a web-based terminal.
