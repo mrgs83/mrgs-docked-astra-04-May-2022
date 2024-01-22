@@ -13,7 +13,7 @@
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
   <Icon>https://raw.githubusercontent.com/mrgs83/logos/main/astra_sat.png</Icon>
   <Config Name="WebUI" Target="8000" Default="8000" Mode="tcp" Description="WebUI port" Type="Port" Display="always"/>
-  <Config Name="License Path" Target="/etc/astra/license.txt" Default="/mnt/user/appdata/astra/license.txt" Mode="rw" Description="Path to license file."/>
-  <Config Name="Config File" Target="/etc/astra/astra.conf" Default="/mnt/user/appdata/astra/astra.conf" Mode="rw" Description="Path to configuration file."/>
+  <Config Name="License Path" Target="/etc/astra/" Default="/mnt/user/appdata/astra/" Mode="rw" Description="Path to license file." Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="Config File" Target="/etc/astra/" Default="/mnt/user/appdata/astra/" Mode="rw" Description="Path to configuration file." Type="Path" Display="advanced" Required="true" Mask="false"/>
   <Config Name="/dev/dvb" Target="{1}" Default="/dev/dvb" Mode="{3}" Description="Only needed if you want to pass through a DVB card to the container. If you use SAT>IP vTuners or IPTV sreams you can leave it out." Type="Device" Display="always" Required="false" Mask="false">/dev/dvb</Config>
 </Container>
