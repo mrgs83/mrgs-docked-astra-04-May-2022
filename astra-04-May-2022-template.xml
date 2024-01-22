@@ -7,8 +7,8 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/mrgs83/mrgs-docked-astra-04-May-2022/issues</Support>
-  <Project>[Project URL]</Project>
-  <Overview>A Docker container for Astra-04-May-2022</Overview>
+  <Project/>
+  <Overview>A Docker container for Astra 04-May-2022</Overview>
   <Category>Media:Video Applications:</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
   <Icon>https://raw.githubusercontent.com/mrgs83/logos/main/astra_sat.png</Icon>
