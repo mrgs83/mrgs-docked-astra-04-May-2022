@@ -1,6 +1,6 @@
 ## Adding Astra Docker Template on Unraid OS
 ```bash
-curl -L https://github.com/mrgs83/mrgs-docked-astra-04-May-2022/blob/main/astra-04-May-2022-template.xml -o /boot/config/plugins/dockerMan/templates-user/my-astra-04-May-2022-template.xml
+curl -L https://raw.githubusercontent.com/mrgs83/mrgs-docked-astra-04-May-2022/main/astra-04-May-2022-template.xml -o /boot/config/plugins/dockerMan/templates-user/my-astra-04-May-2022-template.xml
 ```
 ### Prerequisites
 Before deploying Astra, ensure you have the necessary license and configuration files available:
