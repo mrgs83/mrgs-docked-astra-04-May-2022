@@ -3,17 +3,20 @@
   <Name>Astra</Name>
   <Repository>mrgs83/mrgs-docked-astra-04-May-2022:latest</Repository>
   <Registry>https://hub.docker.com/r/mrgs83/mrgs-docked-astra-04-May-2022</Registry>
-  <Network>bridge</Network>
+  <Network>br0</Network> <!-- Adjust as needed -->
+  <MyIP>192.168.1.111</MyIP> 
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/mrgs83/mrgs-docked-astra-04-May-2022/issues</Support>
-  <Project>https://hub.docker.com/r/mrgs83/mrgs-docked-astra-04-May-2022</Project>
+  <Project>[Project URL]</Project>
   <Overview>A Docker container for Astra-04-May-2022</Overview>
   <Category>Media:Video Applications:</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
   <Icon>https://raw.githubusercontent.com/mrgs83/logos/main/astra_sat.png</Icon>
-  <Config Name="WebUI" Target="8000" Default="8000" Mode="tcp" Description="WebUI port" Type="Port" Display="always"/>
-  <Config Name="License Path" Target="/etc/astra/license.txt" Default="/mnt/user/appdata/astra/license.txt" Mode="rw" Description="Path to license file."/>
-  <Config Name="Config File" Target="/etc/astra/astra.conf" Default="/mnt/user/appdata/astra/astra.conf" Mode="rw" Description="Path to configuration file."/>
-  <Config Name="/dev/dvb" Target="/dev/dvb" Default="/dev/dvb" Description="Only needed if you want to pass through a DVB card to the container. If you use SAT>IP vTuners or IPTV streams you can leave it out." Type="Device" Display="always" Required="false" Mask="false"/>
+  <Config Name="WebUI" Target="8000" Default="8000" Mode="tcp" Description="WebUI port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="License Path" Target="/etc/astra/license.txt" Default="/mnt/user/appdata/astra/license.txt" Mode="rw" Description="Path to license file." Type="Path"/>
+  <Config Name="Config File" Target="/etc/astra/astra.conf" Default="/mnt/user/appdata/astra/astra.conf" Mode="rw" Description="Path to configuration file." Type="Path"/>
+  <Config Name="/dev/dvb" Target="/dev/dvb" Default="/dev/dvb" Mode="{3}" Description="Device path for DVB." Type="Device" Display="always" Required="false" Mask="false"/>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/astra" Mode="rw" Description="Where Astra should store its config files." Type="Path" Display="advanced" Required="true" Mask="false"/>
+  <!-- Add PUID, PGID, and UMASK configurations if needed -->
 </Container>
